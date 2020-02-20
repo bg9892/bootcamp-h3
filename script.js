@@ -20,11 +20,11 @@ function writePassword() {
 
   // Loops through passwordCriteriaArray and checks if all elements are false. If they are, it returns true else it returns false.
   function atLeastOneCriteria(criteria) {
-    
+
     return criteria === false;
   }
 
-  // if isCriteria is true prompt user to pick at least one then repeat the loop.
+  // if noCriteria is true prompt user to pick at least one.
   if (noCriteriaPicked) {
     alert("You must pick at least one.");
     return false
