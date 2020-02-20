@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var charCountTextBox = document.querySelector("#textbox1");
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -7,10 +8,13 @@ generateBtn.addEventListener("click", writePassword);
 // Write password to the #password input
 function writePassword() {
 
-  // If user doesnt choose between 8 and 128 characters, repeat the prompt.
-  do {
-    var passwordLength = prompt("Choose between 8 and 128 characters.");
-  } while (passwordLength < 8 || passwordLength > 128);
+  
+  var passwordLength = charCountTextBox.value;
+
+
+  if (passwordLength < 8 || passwordLength > 128) {
+    return false;
+  }
 
   // Call passwordCriteria and store result 
   var passwordCriteriaArray = passwordCriteria();
