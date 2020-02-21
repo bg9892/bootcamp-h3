@@ -23,21 +23,46 @@
     <!-- Main content -->
     <div class="container">
         <div class="row">
-            <div class="col-md-10 bg-light py-5  mb-5 px-5">
-                <h1>Generate a Password</h1>
+            <div class="col-md-10 bg-light py-5 mb-5 px-5">
+                <h1 style="font-family: Roboto;" >Generate a Password</h1>
                 <hr class="my-4">
 
-                <div class="form-group">
-                    <label for="formGroupMessage">Number of characters 8-128</label>
-                    <textarea class="form-control" id="textbox1" placeholder="Type Number Characters Here" rows="1" ></textarea>
+                <div class="row pl-5">
+                    <label class="col-md-3 pl-2" for="formGroupMessage" style="font-family: Roboto; font-weight: bold;">Password Length</label>
+                    <div class="col-md-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="lowercaseChecked" checked>
+                        <label class="form-check-label" for="materialChecked2" style="font-family: Roboto; font-weight: bold;" >Lowercase</label>
+                    </div>
+                    <div class="col-md-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="uppercaseChecked" checked>
+                        <label class="form-check-label" for="materialChecked2" style="font-family: Roboto; font-weight: bold;" >Uppercase</label>
+                    </div>
                 </div>
 
-                <div class="form-group">
-                    <label for="formGroupMessage">Password</label>
-                    <textarea class="form-control" readonly id="password" placeholder="Your Secure Password" rows="4" ></textarea>
+                <div class="row pl-5">
+                    <p class="col-md-3 pl-5  mb-0" id="slideValue" class="label label-primary" style="font-family: Roboto; font-size: 28px;">50</p>
+                    
+                    <div class="col-md-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="numbersChecked" checked>
+                        <label class="form-check-label" for="materialChecked2" style="font-family: Roboto; font-weight: bold;" >Numbers</label>
+                    </div>
+                    <div class="col-md-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="specialChecked" checked>
+                        <label class="form-check-label" for="materialChecked2" style="font-family: Roboto; font-weight: bold;" >Special Characters</label>
+                    </div>
+                </div>
+ 
+
+                <div class="col-md-10 form-group">
+                    <div class="col-md-4 form-group pl-4">
+                        <form class="range-field">
+                            <input id="slider" type="range" min="8" max="128" />
+                        </form>
+                    </div>
+                    <textarea class="form-control" readonly id="password" placeholder="Your Secure Password" style="font-family: Roboto; font-weight: bold;" rows="4"></textarea>
                 </div>
 
-                <button id="generate" class="btn btn-primary">Generate Password</button>
+                <button id="generate" class="btn btn-primary ml-3" style="font-family: Roboto; font-weight: bold;" >Generate Password</button>
             </div>
         </div>
     </div>
@@ -63,7 +88,7 @@
             </div>
             <div class="row">
                 <div class="col-12 text-center text-light">
-                    <p>Copyright Bradley Goff © 2020. All rights reserved.</p>
+                    <p style="font-family: Roboto; font-weight: bold;" >Copyright Bradley Goff © 2020. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -79,13 +104,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-    <!-- link to javascript -->    
+    <!-- link to javascript -->
     <script src="script.js"></script>
 
 </body>
 
 </html>
-
-
-
-
