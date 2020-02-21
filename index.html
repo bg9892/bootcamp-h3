@@ -21,14 +21,12 @@
     </nav>
 
     <!-- Main content -->
-    <div class="container">
+    <div class="container mb-5">
         <div class="row">
-            <div class="col-md-10 bg-light py-5 mb-5 px-5">
-                <h1 style="font-family: Roboto;" >Generate a Password</h1>
+            <div class="col-md-8 bg-light py-5 mb-5 px-5">
+                <h1 style="font-family: Roboto;">Generate a Password</h1>
                 <hr class="my-4">
-
                 <div class="row pl-5">
-                    <label class="col-md-3 pl-2" for="formGroupMessage" style="font-family: Roboto; font-weight: bold;">Password Length</label>
                     <div class="col-md-3 form-check">
                         <input type="checkbox" class="form-check-input" id="lowercaseChecked" checked>
                         <label class="form-check-label" for="materialChecked2" style="font-family: Roboto; font-weight: bold;" >Lowercase</label>
@@ -38,37 +36,35 @@
                         <label class="form-check-label" for="materialChecked2" style="font-family: Roboto; font-weight: bold;" >Uppercase</label>
                     </div>
                 </div>
-
-                <div class="row pl-5">
-                    <p class="col-md-3 pl-5  mb-0" id="slideValue" class="label label-primary" style="font-family: Roboto; font-size: 28px;">50</p>
-                    
+                <div class="row pl-5 pt-3" id="numbers">
                     <div class="col-md-3 form-check">
                         <input type="checkbox" class="form-check-input" id="numbersChecked" checked>
                         <label class="form-check-label" for="materialChecked2" style="font-family: Roboto; font-weight: bold;" >Numbers</label>
                     </div>
-                    <div class="col-md-3 form-check">
+                    <div class="col-md-6 form-check">
                         <input type="checkbox" class="form-check-input" id="specialChecked" checked>
                         <label class="form-check-label" for="materialChecked2" style="font-family: Roboto; font-weight: bold;" >Special Characters</label>
                     </div>
                 </div>
- 
-
-                <div class="col-md-10 form-group">
-                    <div class="col-md-4 form-group pl-4">
+                <div class="row pl-5 pt-3">
+                    <label class="col-md-3 pl-1" for="formGroupMessage" style="font-family: Roboto; font-weight: bold;">Password Length</label>
+                    <div class="col-md-3 form-group pl-0 pt-1">
                         <form class="range-field">
                             <input id="slider" type="range" min="8" max="128" />
                         </form>
                     </div>
+                    <div class="col-md-6 pl-0" id="slideValue" class="label label-primary" style="font-family: Roboto; font-size: 27px;">50</div>
+                </div>
+                <div class="col-md-10 form-group">                    
                     <textarea class="form-control" readonly id="password" placeholder="Your Secure Password" style="font-family: Roboto; font-weight: bold;" rows="4"></textarea>
                 </div>
-
                 <button id="generate" class="btn btn-primary ml-3" style="font-family: Roboto; font-weight: bold;" >Generate Password</button>
             </div>
         </div>
     </div>
 
     <!-- Footer with links and a copyright paragraph-->
-    <footer class="bg-dark fixed-bottom">
+    <footer class="bg-dark">
         <div class="container">
             <div class="row">
                 <div class="col-12">
