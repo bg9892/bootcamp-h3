@@ -4,20 +4,19 @@ var charCountTextBox = document.querySelector("#textbox1");
 var slide = document.querySelector("#slider");
 var slideVal = 50;
 
-
+//gets the slider value displays this value to the html page
 document.getElementById("slider").oninput = function () {
-  slideVal = document.getElementById("slider").value        //gets the oninput value
-  document.getElementById('slideValue').innerHTML = slideVal    //displays this value to the html page
+  slideVal = document.getElementById("slider").value;        
+  document.getElementById('slideValue').innerHTML = slideVal;
 }
-  
-  
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
 
-  var passwordLength = slideVal;  //charCountTextBox.value; delete this comment
+  var passwordLength = slideVal;
 
 
   if (passwordLength < 8 || passwordLength > 128) {
@@ -56,7 +55,6 @@ function generatePassword(passwordLength, passwordCriteria) {
   var password = "";
   var characterArray = ["abcdefghijklmnopqrstuvwxyz", "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "0123456789", "!#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"]
 
-  var hello = ['!','^','\\'];
   // Loop through passwordCriteria (type of characters user picked) then set charset to elements in characterArray.
   for (var i = 0; i < characterArray.length; i++) {
     if (passwordCriteria[i]) {
@@ -64,7 +62,7 @@ function generatePassword(passwordLength, passwordCriteria) {
     }
   }
 
-  // Picks a random character in charset and adds it to password variable up to the number of characters the user chose. 
+  // Picks a random character in charset and adds it to password variable up to the number of characters the user decides. 
   for (var i = 0; i < passwordLength; i++) {
     password += charset[Math.floor(Math.random() * charset.length)];
   }
@@ -79,10 +77,6 @@ function passwordCriteria() {
   var uppercase = document.querySelector("#uppercaseChecked").checked;
   var numeric = document.querySelector("#numbersChecked").checked;
   var specialCharacters = document.querySelector("#specialChecked").checked;
-  // var lowercase = confirm("Include lowercase characters?");
-  // var uppercase = confirm("Include uppercase characters?");
-  // var numeric = confirm("Include numbers?");
-  // var specialCharacters = confirm("Include special characters?");
 
   return [lowercase, uppercase, numeric, specialCharacters];
 }
