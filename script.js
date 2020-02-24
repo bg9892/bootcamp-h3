@@ -1,13 +1,12 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var charCountTextBox = document.querySelector("#textbox1");
 var slide = document.querySelector("#slider");
 var slideVal = 50;
 
 //gets the slider value displays this value to the html page
-document.getElementById("slider").oninput = function () {
-  slideVal = document.getElementById("slider").value;        
-  document.getElementById('slideValue').innerHTML = slideVal;
+document.querySelector("#slider").oninput = function () {
+  slideVal = document.querySelector("#slider").value;        
+  document.querySelector('#slideValue').innerHTML = slideVal;
 }
 
 // Add event listener to generate button
@@ -17,7 +16,6 @@ generateBtn.addEventListener("click", writePassword);
 function writePassword() {
 
   var passwordLength = slideVal;
-
 
   if (passwordLength < 8 || passwordLength > 128) {
     return false;
@@ -42,10 +40,7 @@ function writePassword() {
   }
 
   var password = generatePassword(passwordLength, passwordCriteriaArray);
-
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
+  document.querySelector("#password").value = password;
 }
 
 // Function to generate password.
@@ -66,7 +61,6 @@ function generatePassword(passwordLength, passwordCriteria) {
   for (var i = 0; i < passwordLength; i++) {
     password += charset[Math.floor(Math.random() * charset.length)];
   }
-
   return password;
 }
 
