@@ -1,5 +1,8 @@
 # Vanderbilt Coding Bootcamp homework assignment #3
 
+# Website link
+
+(https://bg9892.github.io/bootcamp-h3/)
 
 ## Notes
 
@@ -11,12 +14,8 @@
 - Fonts are made with Google fonts.
 - Icon links in the footer are made with font awesome.
 
-# Website link
-
-(https://bg9892.github.io/bootcamp-h3/)
-
 # Screenshots
 
-![Index](Assets/screenshot.png)
+![Index](Assets/ScreenShot.png)
 
 
