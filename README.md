@@ -1,4 +1,4 @@
-# Vanderbilt Coding Bootcamp homework assignment #3
+# Password Generator
 
 # Website link
 
