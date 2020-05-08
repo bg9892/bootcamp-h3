@@ -2,7 +2,7 @@
 
 # Website link
 
-(https://bg9892.github.io/bootcamp-h3/)
+(https://bg9892.github.io/password-generator/)
 
 ## Notes
 
